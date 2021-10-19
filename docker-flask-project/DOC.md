@@ -1106,7 +1106,7 @@ CMD ["python", "./run.py"]
 Upon doing this, build the Docker image with the following command in the root of your project:
 `docker build -t <user-name>/<name-of-the-container>:<tag-name> .`   
 and run it:  
-`docker run --network=host --env DB_URL=postgresql+psycopg2://test_user:password@localhost/test_db -p 8000:8000 <user-name>/<name-of-the-container>:<tag-name>`
+`docker run --network=host --env DB_URL=postgresql+psycopg2://test_user:password@host.docker.internal/test_db -p 8000:8000 <user-name>/<name-of-the-container>:<tag-name>`
 
 Now your application is running in the docker container!
 You should test it the same way you did it earlier.
